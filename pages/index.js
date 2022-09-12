@@ -1,26 +1,17 @@
-
-import { useState } from 'react'
+import globalStyles from '../style/global.js';
 
 const Home = () => {
     
     return (
-        <>
-            <h1>Olá Mundo!</h1>
-            <Contador/>
+        <>  
+          <style jsx global>{`${globalStyles}`}</style>
+            <h1>Estados</h1>
+            <h2>Selecione um jogo abaixo</h2> 
+            <h6>(Prometo que a próxima página é melhor estilizada)</h6>
+            <a href='/Estados-Unidos'><h3>Estados do Estados Unidos</h3></a>
+            <a href='/Brasil'><h3>Estados do Brasil</h3></a>
         </>
     )
 }
-const Contador = () => {
-    const [contador, setContador] = useState(0)
-    function adicionarContador() {
-        setContador(contador + 1)
-    }
-    return (
-        <>
-        <h2>{contador}</h2>
-        <button onClick={adicionarContador}>Adicionar</button>
-        </>
-        )
 
-}
 export default Home
